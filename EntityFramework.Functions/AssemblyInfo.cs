@@ -2,7 +2,10 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
+#if !NETCOREAPP3_0
 [assembly: AssemblyTitle("EntityFramework.Functions")]
+#endif
+
 [assembly: Guid("20128f9b-b68d-4e51-a0e9-67eb1e7b9402")]
 
 [assembly: InternalsVisibleTo("EntityFramework.Functions.Tests,PublicKey=" +
