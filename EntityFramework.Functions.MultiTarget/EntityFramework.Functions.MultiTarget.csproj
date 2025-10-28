@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.1;net462;net472;net48</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Tools\Key.snk</AssemblyOriginatorKeyFile>
-    <Version>1.5.1</Version>
+    <Version>1.5.2</Version>
     <Authors>Dixin Yan</Authors>
     <Company>Dixin Yan</Company>
     <PackageId>Grammophone.EntityFramework.Functions</PackageId>
@@ -20,8 +20,8 @@
 		<RepositoryUrl>https://github.com/grammophone/EntityFramework.Functions</RepositoryUrl>
     <Copyright>Dixin Yan https://weblogs.asp.net/dixin</Copyright>
     <PackageTags>EF Database Data O/RM ADO.NET EntityFramework Entity Framework CodeFirst Code First Functions StoredProcedures Stored Procedures table-valued tablevalued scalar-valued scalarvalued composable non-composable noncomposable aggregate built-in niladic</PackageTags>
-    <AssemblyVersion>1.5.1.0</AssemblyVersion>
-    <FileVersion>1.5.1.0</FileVersion>
+    <AssemblyVersion>1.5.2.0</AssemblyVersion>
+    <FileVersion>1.5.2.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
