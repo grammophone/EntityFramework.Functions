@@ -41,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EntityFramework.Functions.NetStandard\EntityFramework.Functions.NetStandard.csproj" />
+    <ProjectReference Include="..\EntityFramework.Functions.MultiTarget\EntityFramework.Functions.MultiTarget.csproj" />
     <ProjectReference Include="..\EntityFramework.Functions.Tests.Library.NetStandard\EntityFramework.Functions.Tests.Library.NetStandard.csproj" />
   </ItemGroup>
 
