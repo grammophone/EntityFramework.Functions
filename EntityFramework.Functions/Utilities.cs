@@ -27,16 +27,19 @@ namespace EntityFramework.Functions
     {
         internal static EdmProperty Clone(this EdmProperty property)
         {
-            EdmProperty clone = EdmProperty.Create(property.Name, property.TypeUsage);
-            clone.CollectionKind = property.CollectionKind;
-            clone.ConcurrencyMode = property.ConcurrencyMode;
-            clone.IsFixedLength = property.IsFixedLength;
-            clone.IsMaxLength = property.IsMaxLength;
-            clone.IsUnicode = property.IsUnicode;
-            clone.MaxLength = property.MaxLength;
-            clone.Precision = property.Precision;
-            clone.Scale = property.Scale;
-            clone.StoreGeneratedPattern = property.StoreGeneratedPattern;
+            EdmProperty clone = property.IsEnumType ? 
+              EdmProperty.CreatePrimitive(property.Name, PrimitiveType.GetEdmPrimitiveType(PrimitiveTypeKind.Int32))
+              : EdmProperty.Create(property.Name, property.TypeUsage);
+
+            if (clone.CollectionKind != property.CollectionKind) clone.CollectionKind = property.CollectionKind;
+            if (clone.ConcurrencyMode != property.ConcurrencyMode) clone.ConcurrencyMode = property.ConcurrencyMode;
+            if (clone.IsFixedLength != property.IsFixedLength) clone.IsFixedLength = property.IsFixedLength;
+            if (clone.IsMaxLength != property.IsMaxLength) clone.IsMaxLength = property.IsMaxLength;
+            if (clone.IsUnicode != property.IsUnicode) clone.IsUnicode = property.IsUnicode;
+            if (clone.MaxLength != property.MaxLength) clone.MaxLength = property.MaxLength;
+            if (clone.Precision != property.Precision) clone.Precision = property.Precision;
+            if (clone.Scale != property.Scale) clone.Scale = property.Scale;
+            if (clone.StoreGeneratedPattern != property.StoreGeneratedPattern) clone.StoreGeneratedPattern = property.StoreGeneratedPattern;
             clone.SetMetadataProperties(property
                 .MetadataProperties
                 .Where(metadataProerty => !clone
