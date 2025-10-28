@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36616.10 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Functions", "EntityFramework.Functions\EntityFramework.Functions.csproj", "{20128F9B-B68D-4E51-A0E9-67EB1E7B9402}"
 EndProject
@@ -38,13 +38,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Functions.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Functions.Net47", "EntityFramework.Functions.Net47\EntityFramework.Functions.Net47.csproj", "{C9FE5455-28E0-4B20-B57E-06C1A6914631}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Functions.NetStandard", "EntityFramework.Functions.NetStandard\EntityFramework.Functions.NetStandard.csproj", "{54076628-2329-4951-A4C6-FC6EA6611327}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Functions.Tests.Library.NetStandard", "EntityFramework.Functions.Tests.Library.NetStandard\EntityFramework.Functions.Tests.Library.NetStandard.csproj", "{EF4B3DB1-64FA-4435-B926-760F1EA93864}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework.Functions.Tests.NetStandard", "EntityFramework.Functions.Tests.NetStandard\EntityFramework.Functions.Tests.NetStandard.csproj", "{C9A163EA-1BB5-4784-93F4-326BBA3F718E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Functions.Net48", "EntityFramework.Functions.Net48\EntityFramework.Functions.Net48.csproj", "{67C1EDBE-21D0-4AB7-83F9-A51F7128ACFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Functions.MultiTarget", "EntityFramework.Functions.MultiTarget\EntityFramework.Functions.MultiTarget.csproj", "{E25ACD25-5745-73D7-21C0-F9D1B33E55B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,10 +76,6 @@ Global
 		{C9FE5455-28E0-4B20-B57E-06C1A6914631}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9FE5455-28E0-4B20-B57E-06C1A6914631}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9FE5455-28E0-4B20-B57E-06C1A6914631}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54076628-2329-4951-A4C6-FC6EA6611327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54076628-2329-4951-A4C6-FC6EA6611327}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54076628-2329-4951-A4C6-FC6EA6611327}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54076628-2329-4951-A4C6-FC6EA6611327}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EF4B3DB1-64FA-4435-B926-760F1EA93864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EF4B3DB1-64FA-4435-B926-760F1EA93864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF4B3DB1-64FA-4435-B926-760F1EA93864}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -92,6 +88,10 @@ Global
 		{67C1EDBE-21D0-4AB7-83F9-A51F7128ACFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67C1EDBE-21D0-4AB7-83F9-A51F7128ACFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67C1EDBE-21D0-4AB7-83F9-A51F7128ACFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25ACD25-5745-73D7-21C0-F9D1B33E55B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25ACD25-5745-73D7-21C0-F9D1B33E55B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25ACD25-5745-73D7-21C0-F9D1B33E55B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25ACD25-5745-73D7-21C0-F9D1B33E55B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
