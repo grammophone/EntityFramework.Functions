@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFrameworks>netstandard2.1;net462;net472;net48</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Tools\Key.snk</AssemblyOriginatorKeyFile>
     <Version>1.5.0</Version>
@@ -13,7 +13,7 @@
     <AssemblyName>EntityFramework.Functions</AssemblyName>
     <RootNamespace>EntityFramework.Functions</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageProjectUrl>https://github.com/Dixin/EntityFramework.Functions</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/grammophone/EntityFramework.Functions</PackageProjectUrl>
     <Copyright>Dixin Yan https://weblogs.asp.net/dixin</Copyright>
     <PackageTags>EF Database Data O/RM ADO.NET EntityFramework Entity Framework CodeFirst Code First Functions StoredProcedures Stored Procedures table-valued tablevalued scalar-valued scalarvalued composable non-composable noncomposable aggregate built-in niladic</PackageTags>
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
