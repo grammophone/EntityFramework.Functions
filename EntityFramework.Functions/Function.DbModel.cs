@@ -739,7 +739,7 @@ namespace EntityFramework.Functions
                 .EntityTypes
                 .Where(entityType =>
                     entityType.FullName.EqualsOrdinal(clrType.FullName)
-                    || (entityType.MetadataProperties.SingleOrDefault(p => p.Name == "http://schemas.microsoft.com/ado/2013/11/edm/customannotation:ClrType'")?.Value?.Equals(clrType) ?? false)
+                    || (entityType.MetadataProperties.SingleOrDefault(p => p.Name == "http://schemas.microsoft.com/ado/2013/11/edm/customannotation:ClrType")?.Value?.Equals(clrType) ?? false)
                     || entityType.Name.EqualsOrdinal(clrType.Name)
                     && entityType
                         .Properties
@@ -797,7 +797,7 @@ namespace EntityFramework.Functions
                 .ComplexTypes
                 .Where(complexType =>
                     complexType.FullName.EqualsOrdinal(clrType.FullName)
-										|| (complexType.MetadataProperties.SingleOrDefault(p => p.Name == "http://schemas.microsoft.com/ado/2013/11/edm/customannotation:ClrType'")?.Value?.Equals(clrType) ?? false)
+										|| (complexType.MetadataProperties.SingleOrDefault(p => p.Name == "http://schemas.microsoft.com/ado/2013/11/edm/customannotation:ClrType")?.Value?.Equals(clrType) ?? false)
 										|| complexType.Name.EqualsOrdinal(clrType.Name)
                     && complexType
                         .Properties
