@@ -1,23 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1;net462;net472;net48</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Tools\Key.snk</AssemblyOriginatorKeyFile>
-    <Version>1.5.0</Version>
+    <Version>1.5.1</Version>
     <Authors>Dixin Yan</Authors>
     <Company>Dixin Yan</Company>
-    <PackageId>EntityFramework.Functions</PackageId>
-    <Product>EntityFramework.Functions</Product>
-    <Description>EntityFramework.Functions library implements Entity Framework code first support for stored procedures, table-valued functions, scalar-valued functions (composable or non-composable), aggregate functions, built-in functions, and niladic function.</Description>
+    <PackageId>Grammophone.EntityFramework.Functions</PackageId>
+    <Product>Grammophone.EntityFramework.Functions</Product>
+    <Description>Fork of EntityFramework.Functions library - implements Entity Framework code first support for stored procedures, table-valued functions, scalar-valued functions (composable or non-composable), aggregate functions, built-in functions, and niladic function.</Description>
     <AssemblyName>EntityFramework.Functions</AssemblyName>
     <RootNamespace>EntityFramework.Functions</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/grammophone/EntityFramework.Functions</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Copyright>Dixin Yan https://weblogs.asp.net/dixin</Copyright>
     <PackageTags>EF Database Data O/RM ADO.NET EntityFramework Entity Framework CodeFirst Code First Functions StoredProcedures Stored Procedures table-valued tablevalued scalar-valued scalarvalued composable non-composable noncomposable aggregate built-in niladic</PackageTags>
-    <AssemblyVersion>1.5.0.0</AssemblyVersion>
-    <FileVersion>1.5.0.0</FileVersion>
+    <AssemblyVersion>1.5.1.0</AssemblyVersion>
+    <FileVersion>1.5.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -34,5 +36,10 @@
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.0" />
   </ItemGroup>
+
+  <ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\" />
+		<None Include="LICENSE" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 </Project>
