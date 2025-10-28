@@ -16,6 +16,8 @@
     <PackageProjectUrl>https://github.com/grammophone/EntityFramework.Functions</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/grammophone/EntityFramework.Functions</RepositoryUrl>
     <Copyright>Dixin Yan https://weblogs.asp.net/dixin</Copyright>
     <PackageTags>EF Database Data O/RM ADO.NET EntityFramework Entity Framework CodeFirst Code First Functions StoredProcedures Stored Procedures table-valued tablevalued scalar-valued scalarvalued composable non-composable noncomposable aggregate built-in niladic</PackageTags>
     <AssemblyVersion>1.5.1.0</AssemblyVersion>
