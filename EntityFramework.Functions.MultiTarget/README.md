@@ -1,5 +1,15 @@
 <h1>Grammophone.EntityFramework.Functions</h1>
-<h2>A fork from EntityFramework.Functions to address type resolutions.</h2>
+<h2>A fork from EntityFramework.Functions to address entity type resolutions.</h2>
+<p>
+Fixes the following errors when using entity types as return arguments in functions:
+<ul>
+<li>Error about entity types 'not mapped' when in a .NET namespace other than <code>DbContext</code>'s.</li>
+<li>Errors during migration and model validation of the type "(0,0) : error 0040: The Type XXXXX is not qualified with a namespace or alias. Only primitive types can be used without qualification.""</li>
+</ul>
+</p>
+<p>
+This fork has a separate NuGet package named as <a href="https://www.nuget.org/packages/Grammophone.EntityFramework.Functions/" target="_blank">Grammophone.EntityFramework.Functions</a> and is a drop-in replacement for the original package.
+</p>
 <a fref="https://ci.appveyor.com/project/Dixin/entityframework-functions"><img src="https://ci.appveyor.com/api/projects/status/r4x7jaav6ldw68fa?svg=true" alt="Build status" /></a>
 <p>EntityFramework.Functions library implements <a href="https://en.wikipedia.org/wiki/Entity_Framework" target="_blank">Entity Framework</a> code first support for:</p>
 <ul>
