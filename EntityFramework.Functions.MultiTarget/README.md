@@ -3,8 +3,11 @@
 <p>
 Fixes the following errors when using entity types as return arguments in functions:
 <ul>
-<li>Error about entity types 'not mapped' when in a .NET namespace other than <code>DbContext</code>'s.</li>
-<li>Errors during migration and model validation of the type "(0,0) : error 0040: The Type XXXXX is not qualified with a namespace or alias. Only primitive types can be used without qualification.""</li>
+<li>
+Error for entity types when in a .NET namespace other than <code>DbContext</code>'s:
+"TTTT for method MMMM is not supported in conceptual model as a structural type.  This can be caused by a failure to register this type as complex."
+</li>
+<li>Errors during migration and model validation of the type "(0,0) : error 0040: The Type XXXXX is not qualified with a namespace or alias. Only primitive types can be used without qualification."</li>
 </ul>
 </p>
 <p>
