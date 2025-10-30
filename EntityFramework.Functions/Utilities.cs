@@ -37,7 +37,6 @@ namespace EntityFramework.Functions
             }
             else if (property.IsPrimitiveType)
             {
-                var primitiveType = PrimitiveType.GetEdmPrimitiveType(property.PrimitiveType.PrimitiveTypeKind);
                 typeUsage = model.ProviderManifest.GetStoreType(property.TypeUsage); // TypeUsage.Create(primitiveType, property.TypeUsage.Facets);
             }
             else
