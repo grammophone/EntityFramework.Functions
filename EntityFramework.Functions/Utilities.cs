@@ -27,9 +27,18 @@ namespace EntityFramework.Functions
     {
         internal static EdmProperty Clone(this EdmProperty property)
         {
-            EdmProperty clone = property.IsEnumType ? 
-              EdmProperty.CreatePrimitive(property.Name, PrimitiveType.GetEdmPrimitiveType(PrimitiveTypeKind.Int32))
-              : EdmProperty.Create(property.Name, property.TypeUsage);
+            TypeUsage typeUsage;
+
+            if (property.IsEnumType)
+            {
+                typeUsage = TypeUsage.Create(property.UnderlyingPrimitiveType, property.TypeUsage.Facets);
+						}
+            else
+            {
+                typeUsage = property.TypeUsage;
+            }
+
+            var clone = EdmProperty.Create(property.Name, typeUsage);
 
             if (clone.CollectionKind != property.CollectionKind) clone.CollectionKind = property.CollectionKind;
             if (clone.ConcurrencyMode != property.ConcurrencyMode) clone.ConcurrencyMode = property.ConcurrencyMode;

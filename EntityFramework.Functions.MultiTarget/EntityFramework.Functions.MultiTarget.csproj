@@ -7,6 +7,7 @@
     <Version>1.5.2</Version>
     <Authors>Dixin Yan</Authors>
     <Company>Dixin Yan</Company>
+		<LangVersion>9.0</LangVersion>
     <PackageId>Grammophone.EntityFramework.Functions</PackageId>
     <Product>Grammophone.EntityFramework.Functions</Product>
     <Description>Fork of EntityFramework.Functions library - implements Entity Framework code first support for stored procedures, table-valued functions, scalar-valued functions (composable or non-composable), aggregate functions, built-in functions, and niladic function.</Description>
@@ -36,7 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="EntityFramework" Version="6.4.0" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
   </ItemGroup>
 
   <ItemGroup>
