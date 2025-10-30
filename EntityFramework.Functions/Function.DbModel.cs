@@ -509,7 +509,7 @@ namespace EntityFramework.Functions
                     if (modelReturnParameterEntityType != null)
                     {
                         storeReturnParameterRowType = RowType.Create(
-                            modelReturnParameterEntityType.Properties.Select(property => property.Clone()),
+                            modelReturnParameterEntityType.Properties.Select(property => property.Clone(model)),
                             null);
                     }
                     else

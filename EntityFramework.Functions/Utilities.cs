@@ -3,6 +3,7 @@ namespace EntityFramework.Functions
     using System;
     using System.Collections.Generic;
     using System.Data.Entity.Core.Metadata.Edm;
+  	using System.Data.Entity.Infrastructure;
     using System.Linq;
     using System.Reflection;
 
@@ -25,14 +26,20 @@ namespace EntityFramework.Functions
 
     internal static class EdmPropertyExtensions
     {
-        internal static EdmProperty Clone(this EdmProperty property)
+        internal static EdmProperty Clone(this EdmProperty property, DbModel model)
         {
             TypeUsage typeUsage;
 
             if (property.IsEnumType)
             {
-                typeUsage = TypeUsage.Create(property.UnderlyingPrimitiveType, property.TypeUsage.Facets);
-						}
+                var underlyingPrimitiveType = PrimitiveType.GetEdmPrimitiveType(property.UnderlyingPrimitiveType.PrimitiveTypeKind);
+                typeUsage = model.ProviderManifest.GetStoreType(TypeUsage.Create(underlyingPrimitiveType, property.TypeUsage.Facets)); // TypeUsage.Create(underlyingPrimitiveType, property.TypeUsage.Facets);
+            }
+            else if (property.IsPrimitiveType)
+            {
+                var primitiveType = PrimitiveType.GetEdmPrimitiveType(property.PrimitiveType.PrimitiveTypeKind);
+                typeUsage = model.ProviderManifest.GetStoreType(property.TypeUsage); // TypeUsage.Create(primitiveType, property.TypeUsage.Facets);
+            }
             else
             {
                 typeUsage = property.TypeUsage;
@@ -40,6 +47,7 @@ namespace EntityFramework.Functions
 
             var clone = EdmProperty.Create(property.Name, typeUsage);
 
+            if (clone.Nullable != property.Nullable) clone.Nullable = property.Nullable;
             if (clone.CollectionKind != property.CollectionKind) clone.CollectionKind = property.CollectionKind;
             if (clone.ConcurrencyMode != property.ConcurrencyMode) clone.ConcurrencyMode = property.ConcurrencyMode;
             if (clone.IsFixedLength != property.IsFixedLength) clone.IsFixedLength = property.IsFixedLength;
