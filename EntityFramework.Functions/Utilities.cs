@@ -33,11 +33,11 @@ namespace EntityFramework.Functions
             if (property.IsEnumType)
             {
                 var underlyingPrimitiveType = PrimitiveType.GetEdmPrimitiveType(property.UnderlyingPrimitiveType.PrimitiveTypeKind);
-                typeUsage = model.ProviderManifest.GetStoreType(TypeUsage.Create(underlyingPrimitiveType, property.TypeUsage.Facets)); // TypeUsage.Create(underlyingPrimitiveType, property.TypeUsage.Facets);
+                typeUsage = model.ProviderManifest.GetStoreType(TypeUsage.Create(underlyingPrimitiveType, property.TypeUsage.Facets));
             }
             else if (property.IsPrimitiveType)
             {
-                typeUsage = model.ProviderManifest.GetStoreType(property.TypeUsage); // TypeUsage.Create(primitiveType, property.TypeUsage.Facets);
+                typeUsage = model.ProviderManifest.GetStoreType(property.TypeUsage);
             }
             else
             {
